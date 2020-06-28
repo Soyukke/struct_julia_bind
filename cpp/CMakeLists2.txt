@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 2.8)
+set(PROJECT_NAME julia_struct)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+add_library(julia_st STATIC src/julia_struct.cpp)
+
+add_executable(${PROJECT_NAME} src/main.cpp)
+
+target_link_libraries(${PROJECT_NAME} julia_st)
